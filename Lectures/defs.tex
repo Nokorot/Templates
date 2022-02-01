@@ -1,0 +1,58 @@
+% Standard setts.
+\def \N {\mathbb{N}}
+\def \Z {\mathbb{Z}}
+\def \Q {\mathbb{Q}}
+\def \R {\mathbb{R}}
+\def \C {\mathbb{C}}
+
+\def \E {\mathbb{E}}
+\def \Z {\mathbb{Z}}
+\def \I {\mathbb{I}}
+\def \J {\mathbb{J}}
+
+% Vector calculus.
+\newcommand{\dif}[3][]{
+	\ensuremath{\frac{d^{#1} {#2}}{d {#3}^{#1}}}}
+\newcommand{\pdif}[3][]{
+	\ensuremath{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
+
+% Vectors and matricies.
+\newcommand{\mat}[1]{\begin{matrix} #1 \end{matrix}}
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+
+% Add space around the argument.
+\newcommand{\qq}[1]{\quad#1\quad}
+\newcommand{\q}[1]{\:\:#1\:\:}
+
+% Implications
+\newcommand{\la}{\ensuremath{\Longleftarrow}}
+\newcommand{\ra}{\ensuremath{\Longrightarrow}}
+\newcommand{\lra}{\ensuremath{\Longleftrightarrow}}
+
+\newcommand{\pwf}[1]{\begin{cases} #1 \end{cases}}
+\newcommand{\tif}{\text{if}}
+
+% Shorthand
+\newcommand{\vphi}{\varphi}
+\newcommand{\veps}{\varepsilon}
+
+% Maths Operators
+\DeclareMathOperator{\id}{id}
+
+% Maths Operators
+\theoremstyle{plain}
+\theoremstyle{definition}
+\newtheorem{them}{Theorem}[section]
+\newtheorem{prop}[them]{Proposition}
+\newtheorem{corol}[them]{Corollary}
+\newtheorem{lemma}[them]{Lemma}
+
+\newtheorem{defn}[them]{Definition}
+\newtheorem{exmp}[them]{Example}
+\newtheorem{clame}[them]{Clame}
+
+
+\theoremstyle{remark}
+% \newtheorem{remark}[them]{\normalfont\large\textit Remark}
+\newtheorem{remark}[them]{Remark}

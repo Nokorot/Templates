@@ -1,0 +1,57 @@
+\usepackage[utf8]{inputenc}
+
+% Title page
+\usepackage{lipsum}
+\makeatletter \newcommand\mmaketitle{%
+\hskip -1.3em
+\begin{minipage}{\textwidth}
+ {\huge \textit\@title \par } \vskip 1em
+ {\large \@author } \hfill
+ {\large \@date}
+ \noindent\rule{\textwidth}{0.4pt}
+\end{minipage}
+\vskip 2em \par \relax
+} \makeatother
+
+
+% Geometry:
+\usepackage[a4paper]{geometry}
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm }
+
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3pt}
+
+% Standard maths packages
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+
+\usepackage{graphicx,tikz,tikz-cd}
+
+
+
+% Custom packages:
+\usepackage{.styles/custom}
+\usepackage{.styles/mathenvs}
+
+\usepackage{.styles/envs}
+\newSimpleHeaderEnvironment{exercise}{Exercise }
+
+% \usepackage{.styles/wddefs}
+% \wdheader{Definitions Index}
+% Set the formatting 'word definition':
+% \setwdformatting{ \underline{#1} }
+
+% Development tools:
+\usepackage{comment}
+\usepackage{todonotes}
+
+\usepackage{mathtools}
+
+% Defining page margins
+
+% Hyperlinks
+\usepackage{url,hyperref}
+\usepackage{stmaryrd}
+\hypersetup{colorlinks = true, urlcolor   = magenta, %
+             linkcolor  = magenta, citecolor  = magenta}
+\usepackage{xcolor,bold-extra} 

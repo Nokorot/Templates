@@ -1,0 +1,131 @@
+%- nvim: set spell spelllang=no
+%% TODO: Info to compile script
+% pdf_name: CV_en
+
+\documentclass[paper=a4,fontsize=12pt]{scrartcl}
+\usepackage{.styles/my_cv}
+
+
+\myname{Tor-Haakon Gjone}
+
+\myslogan{ %
+Holtebygdveien 192 \\
++4794439163 \\
+\href{mailto:mail@torhgjone.no}{mail@torhgjone.no} \\
+\url{https://torhgjone.no} }
+
+\photo{images/photo.jpg}
+\photosize{.25\textwidth}
+
+\begin{document}
+\makeheader
+
+%%% -------- Personal details -------------
+\NewPart{Personlig informasjon}{}
+
+{Født: }{16 juni 1997} \hspace{.3cm}
+{Nasjonalitet: }{Norsk} \hspace{.3cm}
+{Kjøn: }{Mann}
+
+
+%%% -------- Education --------------------
+\NewPart{Utdanning}{}
+
+\EducationEntry{Årsenhet i Realfag}{2016-2017}{Universitet i Oslo, Norge}{
+Da jeg bestemte meg for å studere i Storbritannia var det i seneste laget å
+søke, så jeg valgte å studere et år i Oslo. Jeg hadde fag innen Matematikk,
+Informatikk og Fysikk, til totalt over 120 studiepong. }
+\sepspace
+
+\EducationEntry{Bachelor i Matematikk}{2017-2020}{University of Edinburgh,
+Storbritannia}{
+Jeg valgte a studere ved Universitetet i Edinburgh tildels på grund av dette
+veldig internasjonalt miljøet ved universitetet. Jeg studerte sammen med andre
+studenter fra hele verden, og fikk gode venner fra blant annet USA, Brasil og
+Kina. Akademisk fokusere jeg på den mere teoretiske delen av matematikk,
+hovedsakelig innen differensial geometri og analyse. I motsetning til i Oslo
+fikk jeg her ikke lov til å ta flere en 60 studiepoeng per år, så jeg deltok i
+en god del ekstra fag uten å ta eksamen. Innen fysikk, valgte jeg hovedsakelig mere teoretiske fag, blant annet "Quantum Field Theory" and "Gauge theories in Particle Physics", jeg fulgte også et par numeriske matte fag, "Numerical ODE's" og "Numerical PDE's". I steden for å fokusere på å få de beste karakterene, prøvde jeg å få en så bred utdanning som mulig, (altså ved å ta ekstra fag), men jeg fulførte allikevel med et snitt på over 70\%, som kvalifiserer som en første klasse grad på universitetet. 
+}
+
+\NewPart{Papers}{}
+\EducationEntry{Bachelor Oppganve}{2019-2020}{Legendrian knot}{
+Det siste året i bachloren skrev jeg også en bachlor oppgave om 'Legendiran knots' og 'the Chekanov DGA-invariance'. Oppgaven besto i hovedsak av å rekonstruere 'the invatiance' som en A-infinity algebra i steden for en infinite dimentional DGA. 
+(Her er en link til dokumentet \href{https://www.dropbox.com/s/18iza8b72nj1dj2/Paper.pdf?dl=1}{dropbox/paper.pdf})
+}
+
+%%% -------- Work experience --------------
+\NewPart{Jobb erfaring}{}
+
+\EducationEntry{Sosial arbeider}{\hspace*{-1cm} 2020}{Vidaråsen Landsby}{
+Denne sommeren har jeg jobbet på Vidaråsen som sosial arbeider, med et en til en ansvar for ei med noen psykiske utviklingshemninger. 
+}
+
+\EducationEntry{Privat Lærer}{2017}{AiMatte, Deltid}{
+Mens jeg studerte andre året i Oslo, jobbet jeg også som privat lærer i
+matematikk og fysikk for elever på videregående skole (også privatist
+elever). }
+\sepspace
+
+\EducationEntry{Leir leder}{\hspace*{-1cm}juli, 2017 + 2018}{Solåsen leirsted}{
+Disse to sommerene var jeg med som leder på TFU-leir gjennom NLM, en en ukes leir for deltagere med psykisk utviklingshemning og andre utfordringer.
+}
+\sepspace
+
+\EducationEntry{Tømrer}{\hspace*{-1cm}Sommer 2016-nå}{Byggmester Pål Gjone}
+{
+I feriene har jeg jobbet som tømrer i min fars firma.
+}
+\sepspace
+
+\EducationEntry{Gårdsarbeid}{\hspace*{-1cm}}{Nordre Holt gård}
+{
+Jeg har vokst opp på gård og har derfor hjulpet til med høyonn, vedlikehold,
+hagearbeid og skogs/ved arbeid (hvor jeg har tatt kurs i hogst og rydding).
+Min mor har også hatt avlastning for barn/ungdom gjennom barnevernet, hvor jeg
+har bistått.
+}
+
+
+% \newpage
+%%% ------- Skills ------------------------
+\NewPart{Andre ferdigheter}{}
+
+\SkillsEntry{Språk}{Norsk (morsmål), Engelsk (flytende), Tysk (grundlegende)}
+
+\sepspace
+\SkillsEntry{Programmering}{
+Jeg har noe grundleggende utdanning fra Oslo (Python, Java, Scheme (lisp) og \LaTeX). Men helt
+siden jeg begynte på videregående har jeg brukt veldig mye tid på å lære
+programmering på nettet. På videregående lærte jeg hovedsakelig Java (prøvde
+også noe LWJGL), men jeg har siden brukt mye Python og Bash og
+blant annet noe Haskell, C/C++ og JavaScript.
+Etter å ha gått over til Linux i slutten av videregående har jeg også
+brukt uttalelige timer på å konfigurere oprativsystemet.  }
+
+\sepspace
+\SkillsEntry{Kurs}{
+Jeg har kurs i både hogst og rydding med motorsag og jeg har også bratkort.
+}
+
+
+\NewPart{Hobbier}{}
+\SkillsEntry{Programmering} {
+Jeg brukt veldig min tid på programmering. Da jeg begynte på videregående, startet jeg også å lære meg selv java, både på youtube, men hovedsakelig ved å prøve, feile og prøve på nytt. I løpet av videregående gikk veldig mye av fritiden min på ettermidagne med på dette. Da jeg begynte på universitetet i Oslo, bestemte jeg meg for å lære python, så jeg satte i gang med å programmere en kopi av snake ved hjelp av 'pygame'. Med tiden har jeg også vært innom en reke andre språk, noen av dem listet over. For eksempel møtte jeg javascript (nodejs) da jeg, i 2018/19, holdt på med en facebook-messenger-bot som hovedsakelig comelerte latex code og sendte resultatet i form av et bilde.
+}\sepspace
+
+\SkillsEntry{Scripting}{
+I løpet av videregående, gikk jeg også over til å bruke ubuntu (linux), som mitt hoved operativsystem. Jeg har brukt utallige timer på å det jeg kaller å "surre rundt på datamaginen", dette innebærer, blant annet å skrive forskjellige configurasjons filer, skrive none bash (or other shell languages) scripts, forandre på noe source code og mange andre småting jeg ikke har navn på. Dette har naturligvis ført til at jeg har reformatert pc-en flere ganger en jeg kan telle. 
+}\sepspace
+
+\SkillsEntry{Friluftsliv} {
+Jeg bruker også mye tid på utendørs aktiviteter, mye sykling, klatring og gjerne skigåing når muligheten byr seg.
+}
+
+
+%%% ------- References --------------------
+
+%\NewPart{References}{}
+% Available upon request
+
+\end{document}

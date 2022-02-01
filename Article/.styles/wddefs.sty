@@ -1,0 +1,19 @@
+
+\RequirePackage{tocloft}
+
+\makeatletter
+\newcommand\wdheader[1]{\def\%wdheader{#1}}
+\wdheader{}
+\newlistof{worddefs}{wd}{\%wdheader}
+
+\newcommand\wdformatting[1]{ \underline{\textit{#1}} }
+\newcommand\setwdformatting[1]{\renewcommand\wdformatting[1]{#1}}
+
+\renewcommand{\wddef}[1]{%
+\wdformatting{#1}
+%
+% Adding 'word definition' to the list:
+\addcontentsline{wd}{worddefs}
+%% Formatting of list entry:
+{ \protect\numberline{}#1 } }
+\makeatother

@@ -1,0 +1,57 @@
+
+\RequirePackage{scalerel,stackengine}
+
+% Define a very wide hat ( as wide as the argument )
+\stackMath
+\newcommand\verywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+  \scalerel*[\widthof{\ensuremath{#1}\hspace{-2px}}]{\kern.1pt\mathchar"0362\kern.1pt}%
+  {\rule{0ex}{\textheight}}%WIDTH-LIMITED CIRCUMFLEX
+  }{\textheight}% 
+}{2.2ex}}%
+\stackon[-7pt]{#1}{\tmpbox}%
+}
+
+
+% Categorical limits
+\makeatletter
+\newcommand{\colim@}[2]{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font lim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}#2\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand{\colim}{%
+  \mathop{\mathpalette\colim@{\rightarrowfill@\textstyle}}\nmlimits@
+}
+\newcommand{\invlim@}[2]{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font lim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}#2\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand{\invlim}{%
+  \mathop{\mathpalette\colim@{\leftarrowfill@\textstyle}}\nmlimits@
+}
+\makeatother
+
+
+
+\RequirePackage{tikz,tikz-cd}
+% Diagram stuff
+
+%  The square symbol used to indicate a pullback square
+\newsavebox{\pullback}
+\sbox\pullback{%
+\begin{tikzpicture}%
+\draw (0,0) -- (1ex,0ex) -- (1ex, 1ex);
+\end{tikzpicture}}
+
+
+%  The square symbol used to indicate a pullback square
+\newsavebox{\pushout}
+\sbox\pullback{%
+\begin{tikzpicture}%
+\draw (0,0) -- (1ex,0ex) -- (1ex, 1ex);
+\end{tikzpicture}}

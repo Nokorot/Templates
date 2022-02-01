@@ -1,0 +1,27 @@
+\documentclass[a4paper,11pt,english]{article}
+\usepackage{.styles/basic}
+
+%%%%%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Lecture Notes}}
+\author{Tor Gjone (s1706798)}
+
+%%%%%% Packages  %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+
+%%%%%%% Definitions %%%%%%%%%%%%%%%%%%%%%
+\input{defs}
+\renewcommand{\H}{\mathcal{H}}
+\DeclareMathOperator{\tr}{tr}
+
+\titleformat{\section}%[wrap]
+{\Large\bfseries}{}{.5em}{}
+
+\def\newlecture{\section{Lecture \thesection}}
+
+%%%%%%%% Content %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\mmaketitle
+
+\input{.gen/lecs}
+
+\end{document}

@@ -1,0 +1,37 @@
+\usepackage[utf8]{inputenc}
+
+% Defining page margins
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+% Urls and hyperlinks
+\usepackage{url,hyperref}
+\usepackage{stmaryrd}
+\hypersetup{ colorlinks = true, urlcolor   = magenta, %
+             linkcolor  = magenta, citecolor  = magenta}
+
+%%% Title page
+\usepackage{lipsum}
+\makeatletter \newcommand\mmaketitle{%
+\hskip -1.3em
+\begin{minipage}{\textwidth}
+ {\huge \textit\@title \par } \vskip 1em
+ {\large \@author } \hfill
+ {\large \@date}
+ \noindent\rule{\textwidth}{0.4pt}
+\end{minipage}
+\vskip 2em \par \relax
+} \makeatother
+
+% Maths packages
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+
+%%% Struf
+\usepackage{comment}
+
+\usepackage{.styles/envs}
+\usepackage{xcolor,bold-extra} 
+
+\usepackage{graphicx}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.5.1}
+\usepackage{todonotes}

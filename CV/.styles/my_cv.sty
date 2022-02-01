@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This style sheet is based of: 
+%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Date: Des 2020
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{.styles/basic}
+\geometry{ a4paper, top=15mm, bottom=15mm, left=15mm, right=15mm }
+
+\usepackage{wrapfig}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+
+%%% Custom sections
+\usepackage{sectsty}
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+
+%%% Define Header 
+\makeatletter
+% define valuables to
+\newcommand\myname[1]{\def\@myname{ #1 }}
+\newcommand\myslogan[1]{\def\@myslogan{ #1 }}
+\newcommand\photo[1]{\def\@myphoto{ #1 }}
+\newcommand\photosize[1]{\def\@photosize{ #1 }}
+\photosize{.33\textwidth}
+
+\newcommand\makeheader{%
+\begin{wrapfigure}{r}{\@photosize}
+\vspace*{-3em} \includegraphics[width=\@photosize]{\@myphoto}
+\end{wrapfigure}
+
+\Huge \usefont{OT1}{phv}{b}{n}  \@myname
+\large \usefont{OT1}{phv}{m}{n} \textit{\flushleft{\@myslogan}}
+\par \normalsize \normalfont
+}\makeatother
+
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\NewPart}[2]{\section*{\uppercase{#1} #2}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name}{birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+        % \parbox{\spacebox}{        % Box to align text
+		\textit{#1} %}			   % Entry name}{birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{white}{%
+			\parbox{6em}{%
+			\hfill\color{black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{white}{\hfill\color{black}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\PaperEntry}[7]{
+		\noindent #1, ``\href{#7}{#2}", \textit{#3} \textbf{#4}, #5 (#6).}
+
+\newcommand{\ArxivEntry}[3]{
+		\noindent #1, ``\href{http://arxiv.org/abs/#3}{#2}", \textit{{cond-mat/}#3}.}
+        
+\newcommand{\BookEntry}[4]{
+		\noindent #1, ``\href{#3}{#4}", \textit{#3}.}
+        
+\newcommand{\FundingEntry}[5]{
+        \noindent #1, ``#2", \$#3 (#4, #5).}
+
+\newcommand{\TalkEntry}[4]{
+		\noindent #1, #2, #3 #4}
+
+\newcommand{\ThesisEntry}[5]{
+		\noindent #1 -- #2 #3 ``#4" \textit{#5}}
+
+\newcommand{\CourseEntry}[3]{
+		\noindent \item{#1: \textbf{#2} \\ #3}}
+
+
+

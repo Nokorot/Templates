@@ -1,0 +1,33 @@
+\documentclass[a4paper,11pt,english]{article}
+\usepackage[utf8]{inputenc}
+
+% Defining page margins
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+% Title page
+\usepackage{lipsum}
+\makeatletter \newcommand\mmaketitle{%
+\hskip -1.3em \begin{minipage}{\textwidth}
+ {\huge \textit\textbf\@title \par } \vskip 1em
+ {\large \@author } \hfill
+ {\large \@date}
+ \noindent\rule{\textwidth}{0.4pt}
+\end{minipage} \vskip 2em \par \relax
+} \makeatother
+
+% Packages
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+\usepackage{comment}
+
+%%% Opening
+\title{<+Title+>}
+\author{<+Author+>}
+
+
+%%%%%%% Content %%%%%%%%%%%
+\begin{document}
+
+\maketitle
+<+Content+>
+
+\end{document}
